@@ -1,0 +1,256 @@
+body {
+    background-color: black;
+    margin-top: 0%;
+    font-family: Roboto;
+
+}
+
+select {
+    width: 270px; 
+}
+
+a {
+    text-decoration: none;
+    font-size: small;
+    color: #D1D1D1;
+}
+a:hover {
+    border: 1px solid lightgray;
+}
+
+a.menu{
+    padding-right: 15px;
+}
+img.resize {
+    max-width: 75%;
+    max-height: 75%;
+    text-justify: center;
+}
+
+.container {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  5.5fr 8fr 40fr 4fr;
+    grid-gap: 0px;
+    grid-template-areas:
+        "header"
+        "advert"
+        "content"
+        "footer"
+}
+
+.advert {
+    grid-area: advert;
+    background-color:white;
+    text-align: center;
+}
+
+.content{
+    grid-area: content;
+    display: grid;
+    background: #D1D1D1;
+    grid-template-columns: 1fr;
+    grid-template-rows:0px 11fr 12fr 4fr 0px;
+    grid-gap: 10px;
+    grid-template-areas: 
+        "."
+        "available_types"
+        "available_makes"
+        "car_by_prices"
+        "."
+}
+
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 5fr 1fr;
+    grid-template-areas: 
+        ". footer_menu ."
+        "bottom bottom bottom"
+}
+
+.footer-menu {
+    grid-area: footer_menu;
+    padding-top: 20px;
+    align-self: center;
+}
+
+.bottom-menu{
+    grid-area: bottom;
+    background: #048EC9;
+    text-align: center;
+    align-self: center;
+}
+
+
+.available-types {
+    grid-area: available_types;
+    background: whitesmoke;
+    display: grid;
+    grid-template-rows: .1fr 25fr ;
+    grid-template:
+        "title"
+        "car_types"
+}
+
+.car-type-main-title{
+    grid-area: title;
+}
+
+.car-type{
+    text-align: center;
+}
+
+.car-type a{
+    background-color: rgb(57, 184, 238);
+    border: none;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    width: 75%;
+    vertical-align: middle;
+    line-height: 200%;
+}
+
+.car-type a:hover{
+    border: none;
+    background: #048EC9;
+}
+
+.car-types{
+    grid-area: car_types;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
+    grid-template-rows: repeat(6,.1fr);
+}
+.car-image{    
+    width: 100px;
+    height: 100px;
+}
+
+
+.available-makes {
+    grid-area: available_makes;
+    background: white;
+    align-content: center;
+    justify-content: center;
+}
+
+.available-models {
+    grid-area: available_models;
+    background: whitesmoke;
+}
+
+.car-by-price {
+    grid-area: car_by_prices;
+    background: whitesmoke;
+}
+
+#logo{
+    display: block; 
+    margin-left: 25%; 
+    margin-right: 25%; 
+    margin-top: 5%; 
+    margin-bottom: 5%;
+}
+
+.logo {
+    grid-area: logo;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.car-form{
+    
+    align-self: center;
+    justify-self: center;
+    background-color: white;
+    grid-area: car_form;
+}
+
+#search{
+    display:block;
+    margin: 5% 35% 5% 35%;
+}
+
+.search{
+    text-align: center;
+    grid-area: search;
+    background: rgb(57, 184, 238);
+    color: white;
+    border-radius:0px 5px 5px 0px;
+}
+
+.search:hover{
+     background: #048EC9;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-rows: .5fr 3fr .5fr 1fr .2fr; 
+    grid-template-columns: .04fr .2fr .4fr .2fr .1fr .1fr;
+    grid-template-areas:
+        ". space . . . ."
+        ". logo car_form search . user"
+        ". . . . . ."
+        ". . menu menu . ."
+        ". . . . . ."   
+}
+
+.menu{
+    grid-area: menu;
+    padding-right: 50px;
+}
+
+.user-account {
+    color: white;
+    grid-area: user;
+    display: grid;
+    grid-template-areas: 
+        "signin signup"
+        "my_automart my_automart"
+    
+}
+
+.signin {
+    padding-right: 5px;
+    border-right: 2px solid lightgray;
+    grid-area: signin;
+    justify-self: flex-end;
+}
+
+.signup {
+    padding-left: 2px;
+    grid-area: signup;
+    justify-self: normal;
+}
+
+.my_automart {
+    justify-self: center;
+    align-self: flex-end;
+    grid-area: my_automart;
+}
+
+.user-icon {
+    grid-area: usericon;
+    background: white;
+}
+
+
+
