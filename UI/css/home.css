@@ -1,0 +1,40 @@
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-rows: .5fr 3fr .5fr 1fr .2fr;
+    grid-template-columns: .04fr .2fr .4fr .2fr .1fr .1fr;
+    grid-template-areas:
+        ". space . . . ."
+        ". logo car_form search . user"
+        ". . . . . ."
+        ". . menu menu . ."
+        ". . . . . ."
+}
+
+.user-account {
+    color: white;
+    grid-area: user;
+    display: grid;
+    grid-template-rows: 0.2fr 0.5fr 0.5fr;
+    grid-template-areas:
+        "greeting"
+        "my_automart"
+        "logout"
+}
+
+.my_automart {
+    text-align: left;
+    justify-self: left;
+    align-self: flex-end;
+    grid-area: my_automart;
+}
+
+.greeting {
+    grid-area: greeting;
+    text-align: left;
+}
+
+.logout {
+    grid-area: logout;
+
+}
