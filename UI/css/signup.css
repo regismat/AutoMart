@@ -1,0 +1,61 @@
+.container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5.7fr 1fr;
+}
+
+.user-form {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        ". title ."
+        ". field_label_1i ."
+        ". field_label_1ii ."
+        ". field_label_1iii ."
+        ". field_label_1iv ."
+        ". field_label_1 ."
+        ". field_label_2 ."
+        ". field_label_2i ."
+        ". field_label_3 ."
+        ". field_label_4 ."
+        ". field_label_5 ."
+        ". field_label_6 ."
+}
+
+
+.label-field1i {
+    grid-area: field_label_1i;
+}
+
+.label-field1ii {
+    grid-area: field_label_1ii;
+
+}
+
+.label-field1iii {
+    grid-area: field_label_1iii;
+
+}
+
+.label-field1iv {
+    grid-area: field_label_1iv;
+
+}
+
+.label-field2i {
+    grid-area: field_label_2i;
+}
+
+#messsage {
+    color: red;
+    text-align: right;
+}
+
+#required {
+    color: red;
+    display: inline;
+    float: none;
+}
+
+select#country {
+    width: 100%;
+    margin: 0px;
+}

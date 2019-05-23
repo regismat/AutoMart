@@ -1,0 +1,153 @@
+.header-user-form {
+    grid-area: header;
+    display: grid;
+    grid-area: header;
+    display: grid;
+    grid-template-rows: .1fr 2fr .1fr;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-areas:
+        ". space . "
+        ". logo . "
+}
+
+
+.logo {
+    border-radius: 5px;
+}
+
+
+.user-form {
+    background: white;
+    border-radius: 5px;
+    grid-area: user_form;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr .5fr 1fr;
+    grid-template-columns: .1fr 3fr .1fr;
+    grid-template-areas:
+        ". title ."
+        ". field_label_1 ."
+        ". field_label_2 ."
+        ". field_label_3 ."
+        ". field_label_4 ."
+        ". field_label_5 ."
+        ". field_label_6 ."
+}
+
+.button {
+    background-color: rgb(57, 184, 238);
+    border: none;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    width: 100%;
+    vertical-align: middle;
+    line-height: 200%;
+
+
+}
+
+.button:hover {
+    background: #048EC9;
+}
+
+
+.label-field4 a,
+.label-field2 a {
+    color: #048EC9;
+}
+
+.label-field4 a:hover {
+    border: none;
+    text-decoration: underline;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+}
+
+label {
+    font-size: small;
+    font-weight: bolder;
+}
+
+.label-field1 {
+    grid-area: field_label_1;
+
+}
+
+.label-field2 {
+    grid-area: field_label_2;
+}
+
+.label-field3 {
+    grid-area: field_label_3;
+}
+
+.label-field4 {
+    grid-area: field_label_4;
+}
+
+.label-field5 {
+    grid-area: field_label_5;
+    text-align: center;
+}
+
+.label-field6 {
+    grid-area: field_label_6;
+    text-align: center;
+}
+
+.user-form-title {
+    font-weight: 100;
+    grid-area: title;
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    background: #D1D1D1;
+    grid-template-columns: 35% 30% 35%;
+    grid-template-rows: 8fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        " . . ."
+        " . . ."
+        " . user_form . "
+        " . . . "
+        " . . . "
+}
+
+hr {
+    color: lightgray;
+}
+
+.container {
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas:
+        "header header"
+        "content content"
+        "footer footer"
+}
+
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "bottom bottom bottom"
+}
+
+
+.bottom-menu {
+    grid-area: bottom;
+    background: black;
+    text-align: center;
+    align-self: center;
+}
