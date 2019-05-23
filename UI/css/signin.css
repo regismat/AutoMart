@@ -10,9 +10,11 @@
         ". logo . "
 }
 
+
 .logo {
     border-radius: 5px;
 }
+
 
 .user-form {
     background: white;
