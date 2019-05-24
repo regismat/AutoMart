@@ -22,8 +22,8 @@ a.menu{
     padding-right: 15px;
 }
 img.resize {
-    max-width: 75%;
-    max-height: 75%;
+    max-width: 25%;
+    max-height: 25%;
     text-justify: center;
 }
 
@@ -162,10 +162,14 @@ img.resize {
 
 #logo{
     display: block; 
-    margin-left: 25%; 
-    margin-right: 25%; 
-    margin-top: 5%; 
-    margin-bottom: 5%;
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: auto; 
+    margin-bottom: auto;
+    
+}
+a #logo{
+    vertical-align: middle;
 }
 
 .logo {
@@ -173,6 +177,7 @@ img.resize {
     background-color: white;
     text-align: center;
     border-radius: 5px 0px 0px 5px;
+    
 }
 
 .car-form{
@@ -185,10 +190,11 @@ img.resize {
 
 #search{
     display:block;
-    margin: 5% 35% 5% 35%;
+    margin: 10% 25% 10% 40%;
 }
 
 .search{
+    
     text-align: center;
     grid-area: search;
     background: rgb(57, 184, 238);
