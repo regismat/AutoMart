@@ -1,0 +1,83 @@
+.container {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5.5fr 19fr 4fr;
+    grid-gap: 0px;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer"
+}
+
+.content {
+    grid-template-columns: .04fr .2fr .5fr .2fr .1fr .1fr;
+    grid-template-rows: 10px 1fr 10px;
+    grid-template-areas:
+        ". . . . . ."
+        ". thumbnails image_preview specifications . ."
+        ". . . . . ."
+}
+
+.thumbnails{
+    grid-area: thumbnails;
+    background: black;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-rows: repeat(4, 25%);
+}
+
+.car-image{
+    width: 75%;
+    display: block;
+    margin: auto;
+
+}
+
+img#preview{
+    vertical-align: middle;
+}
+.main-image-preview{
+    grid-area: image_preview; 
+}
+
+.car-specs{
+    grid-area: specifications;
+    background: white;
+    
+}
+table{
+    width:  100%;
+    border: 2px solid lightgray;
+}
+tr{
+   border: 1px solid lightgray;
+}
+tr.action td{
+    text-align: center;
+}
+td{
+    font-size: small;
+       border-bottom: 1px solid lightgray;
+}
+td.title{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+td#price{
+    color : green;
+    text-decoration: underline;
+}
+.button{
+    text-align: center;
+    display: block;
+    text-align: center;
+}
+
+
