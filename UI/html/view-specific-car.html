@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../css/view-specific-car.css">
     <script type="text/javascript" src="../js/car-adv-actions.js"></script>
     <script type="text/javascript" src="../js/image-preview.js"></script>
-    
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add Car</title>
 </head>
@@ -90,8 +90,8 @@
                         src="./../img/car_images/suv/mercedes/main.jpg" alt="">
                 </span>
                 <span>
-                     <img class="car-image" onmouseover="imagePreview(this.src)" class="car-image"
-                         src="./../img/car_images/suv/mercedes/2.jpg" alt="">
+                    <img class="car-image" onmouseover="imagePreview(this.src)" class="car-image"
+                        src="./../img/car_images/suv/mercedes/2.jpg" alt="">
                 </span>
                 <span>
                     <img onmouseover="imagePreview(this.src)" class="car-image"
@@ -110,7 +110,8 @@
                 <table>
                     <tr>
                         <td class="title">Description</td>
-                        <td class="detail">A well-made interior with lots of standard features, sporty handling, and a potent array of
+                        <td class="detail">A well-made interior with lots of standard features, sporty handling, and a
+                            potent array of
                             engines are hallmarks of the used 2013 Mercedes-Benz GL-Class. Its low reliability rating,
                             however, keeps it in the middle of a competitive segment.</td>
                     </tr>
@@ -132,13 +133,18 @@
                     </tr>
                     <tr id="price-action">
                         <td class="title">Price($)</td>
-                        <td id ="price" class="price ">37000</td>
+                        <td id="price" class="price ">37000</td>
+                    </tr>
+                    
+                    <tr id="price-action">
+                        <td class="title">Availability</td>
+                        <td id="availability" class="price ">NOT SOLD</td>
                     </tr>
                 </table>
                 <span id="update-trigger"><span class="button" onclick="displayAction('#update-price')">Update
                         Price</span></span>
-                <span onclick=""><a href="" class="button">Add picture</a></span>
-                <span><a href="" class="button">Mark as sold</a></span>
+                <span class="button">Add picture</span>
+                <span onclick="markCarAsSold(this)" class="button" id="markavailability">Mark as sold</span>
                 <span><a class="button">Remove Advertisement</a></span>
                 <table id="update-price">
                     <tr>
@@ -146,7 +152,7 @@
                         <td><input type="text" value='37000' id='inputed_price'></td>
                         <td><a onclick="updatePrice()" class="button">Update</a></td>
                     </tr>
-                </table>                
+                </table>
             </div>
         </div>
 

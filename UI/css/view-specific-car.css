@@ -58,8 +58,12 @@ table{
 tr{
    border: 1px solid lightgray;
 }
+table#update-price{
+    display: none;
+}
 table#update-price td{
     border: 0px solid lightgray;
+    
 }
 tr.action td{
     text-align: center;
@@ -73,8 +77,12 @@ td.title{
     text-decoration: underline;
 }
 
-td#price{
+td#availability, td#price{
     color : green;
+    text-decoration: underline;
+}
+td#availability2{
+    color: red;
     text-decoration: underline;
 }
 .button{
