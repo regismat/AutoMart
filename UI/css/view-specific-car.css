@@ -58,7 +58,11 @@ table{
 tr{
    border: 1px solid lightgray;
 }
-table#update-price{
+table#update-album{
+    display: none;
+}
+
+table#update-price {
     display: none;
 }
 table#update-price td{
@@ -81,10 +85,7 @@ td#availability, td#price{
     color : green;
     text-decoration: underline;
 }
-td#availability2{
-    color: red;
-    text-decoration: underline;
-}
+
 .button{
     text-align: center;
     display: block;
