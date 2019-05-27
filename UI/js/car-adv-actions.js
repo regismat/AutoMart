@@ -40,3 +40,9 @@ function markCarAsSold(item){
     }
     
 }
+
+function updateAlbum() {
+    var update_album = document.querySelector('#update-album');
+    update_album.style.display = 'none';
+    alert('Album updated Successfully');
+}

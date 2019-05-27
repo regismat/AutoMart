@@ -90,15 +90,15 @@
                         src="./../img/car_images/suv/mercedes/main.jpg" alt="">
                 </span>
                 <span>
-                    <img class="car-image" onmouseover="imagePreview(this.src)" class="car-image"
+                    <img class="car-image" id="image2" onmouseover="imagePreview(this.src)" class="car-image"
                         src="./../img/car_images/suv/mercedes/2.jpg" alt="">
                 </span>
                 <span>
-                    <img onmouseover="imagePreview(this.src)" class="car-image"
+                    <img onmouseover="imagePreview(this.src)" id = "image3" class="car-image"
                         src="./../img/car_images/suv/mercedes/3.jpg" alt="">
                 </span>
                 <span>
-                    <img onmouseover="imagePreview(this.src)" class="car-image"
+                    <img onmouseover="imagePreview(this.src)" id="image4" class="car-image"
                         src="./../img/car_images/suv/mercedes/4.jpg" alt="">
                 </span>
             </div>
@@ -141,16 +141,32 @@
                         <td id="availability" class="price ">NOT SOLD</td>
                     </tr>
                 </table>
-                <span id="update-trigger"><span class="button" onclick="displayAction('#update-price')">Update
-                        Price</span></span>
-                <span class="button">Add picture</span>
+                <span class="button" onclick="displayAction('#update-price')">Update
+                        Price</span>
+                <span class="button" onclick="displayAction('#update-album')">Add picture</span>
                 <span onclick="markCarAsSold(this)" class="button" id="markavailability">Mark as sold</span>
-                <span><a class="button">Remove Advertisement</a></span>
                 <table id="update-price">
                     <tr>
                         <td>New price($)</td>
                         <td><input type="text" value='37000' id='inputed_price'></td>
-                        <td><a onclick="updatePrice()" class="button">Update</a></td>
+                        <td><span onclick="updatePrice()" class="button">Update</span></td>
+                    </tr>
+                </table>
+                <table id="update-album">
+                    <tr>
+                        <th>Select pictures</th><th></th>
+                    </tr>
+                    <tr>
+                        <td><input type="file" onchange="readURLAlbum(this, '#image2')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="file" onchange="readURLAlbum(this, '#image3')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="file" onchange="readURLAlbum(this, '#image4')"></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="updateAlbum()" class="button">Update album</a></td>
                     </tr>
                 </table>
             </div>
