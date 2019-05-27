@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/add-car-advertisement.css">
     <link rel="stylesheet" href="../css/view-specific-car.css">
+    <script type="text/javascript" src="../js/car-adv-actions.js"></script>
     <script type="text/javascript" src="../js/image-preview.js"></script>
+    
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add Car</title>
 </head>
@@ -128,15 +130,23 @@
                         <td class="title">Steering</td>
                         <td class="detail">Left</td>
                     </tr>
-                    <tr>
-                        <td class="title">Price</td>
-                        <td id ="price" class="price ">$37000</td>
+                    <tr id="price-action">
+                        <td class="title">Price($)</td>
+                        <td id ="price" class="price ">37000</td>
                     </tr>
                 </table>
-                <span><a href="" class="button">Update Price</a></span>
-                <span><a href="" class="button">Add picture</a></span>
+                <span id="update-trigger"><span class="button" onclick="displayAction('#update-price')">Update
+                        Price</span></span>
+                <span onclick=""><a href="" class="button">Add picture</a></span>
                 <span><a href="" class="button">Mark as sold</a></span>
-                <span><a href="" class="button">Remove Advertisement</a></span>
+                <span><a class="button">Remove Advertisement</a></span>
+                <table id="update-price">
+                    <tr>
+                        <td>New price($)</td>
+                        <td><input type="text" value='37000' id='inputed_price'></td>
+                        <td><a onclick="updatePrice()" class="button">Update</a></td>
+                    </tr>
+                </table>                
             </div>
         </div>
 
