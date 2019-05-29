@@ -93,7 +93,7 @@
                         src="./../img/car_images/suv/mercedes/2.jpg" alt="">
                 </span>
                 <span>
-                    <img onmouseover="imagePreview(this.src)" id = "image3" class="car-image"
+                    <img onmouseover="imagePreview(this.src)" id="image3" class="car-image"
                         src="./../img/car_images/suv/mercedes/3.jpg" alt="">
                 </span>
                 <span>
@@ -132,28 +132,29 @@
                     </tr>
                     <tr id="price-action">
                         <td class="title">Price($)</td>
-                        <td id="price" class="price ">37000</td>
+                        <td id="price" class="price ">35000</td>
                     </tr>
-                    
+
                     <tr id="price-action">
                         <td class="title">Availability</td>
-                        <td id="availability" class="price ">NOT SOLD</td>
+                        <td id="availability" class="price ">SOLD</td>
                     </tr>
                 </table>
                 <span class="button" onclick="displayAction('#update-price')">Update
-                        Price</span>
+                    Price</span>
                 <span class="button" onclick="displayAction('#update-album')">Add picture</span>
                 <span onclick="markCarAsSold(this)" class="button" id="markavailability">Mark as sold</span>
                 <table id="update-price">
                     <tr>
                         <td>New price($)</td>
-                        <td><input type="text" value='37000' id='inputed_price'></td>
+                        <td><input type="text" id='inputed_price'></td>
                         <td><span onclick="updatePrice()" class="button">Update</span></td>
                     </tr>
                 </table>
                 <table id="update-album">
                     <tr>
-                        <th>Select pictures</th><th></th>
+                        <th>Select pictures</th>
+                        <th></th>
                     </tr>
                     <tr>
                         <td><input type="file" onchange="readURLAlbum(this, '#image2')"></td>

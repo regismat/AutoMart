@@ -2,6 +2,11 @@ function displayAction(id){
     var item = document.querySelector(id);
     if( item.style.display=='none' ){
         item.style.display = 'block';
+        if (id == '#update-price') {
+            var price = document.querySelector('#price');
+            var inputed_price = document.querySelector('#inputed_price');
+            inputed_price.value = price.innerHTML;
+        }
     }else{
         item.style.display = 'none';
     }
