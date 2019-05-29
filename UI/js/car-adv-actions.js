@@ -51,3 +51,16 @@ function updateAlbum() {
     update_album.style.display = 'none';
     alert('Album updated Successfully');
 }
+
+function search(){
+    alert('done!');
+    location.replace('../html/public-view-all-unsold-cars.html?type=bmw')       
+  
+}
+
+function addEvents(){
+
+    
+    //search_button.addEventListener('click', search())
+}
+addEvents();
