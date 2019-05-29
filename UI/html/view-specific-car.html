@@ -93,7 +93,7 @@
                         src="./../img/car_images/suv/mercedes/2.jpg" alt="">
                 </span>
                 <span>
-                    <img onmouseover="imagePreview(this.src)" id = "image3" class="car-image"
+                    <img onmouseover="imagePreview(this.src)" id="image3" class="car-image"
                         src="./../img/car_images/suv/mercedes/3.jpg" alt="">
                 </span>
                 <span>
@@ -134,14 +134,14 @@
                         <td class="title">Price($)</td>
                         <td id="price" class="price ">37000</td>
                     </tr>
-                    
+
                     <tr id="price-action">
                         <td class="title">Availability</td>
                         <td id="availability" class="price ">NOT SOLD</td>
                     </tr>
                 </table>
                 <span class="button" onclick="displayAction('#update-price')">Update
-                        Price</span>
+                    Price</span>
                 <span class="button" onclick="displayAction('#update-album')">Add picture</span>
                 <span onclick="markCarAsSold(this)" class="button" id="markavailability">Mark as sold</span>
                 <table id="update-price">
@@ -153,7 +153,8 @@
                 </table>
                 <table id="update-album">
                     <tr>
-                        <th>Select pictures</th><th></th>
+                        <th>Select pictures</th>
+                        <th></th>
                     </tr>
                     <tr>
                         <td><input type="file" onchange="readURLAlbum(this, '#image2')"></td>
