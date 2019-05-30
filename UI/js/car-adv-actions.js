@@ -1,4 +1,4 @@
-function displayAction(id){
+function displayAction(id) {
     var item = document.querySelector(id);
     if( item.style.display=='none' ){
         item.style.display = 'block';
@@ -13,6 +13,15 @@ function displayAction(id){
     }else{
         item.style.display = 'none';
     }
+}
+
+function flagAsFraud() {
+    alert(`
+    Auto-Mart: -Alert-
+    This car advertisement has been flagged as a fraud.
+    Thank you for reporting.
+    `);
+    location.replace('../html/public-view-all-unsold-cars.html');
 }
 
 function updatePrice() {
@@ -40,8 +49,6 @@ function updateOrder() {
     var inputed_quantity = document.querySelector('#inputed_quantity');
     price = inputed_price.value;
     quantity = inputed_quantity.value;
-
-    //hideAction('#update-order');
     location.replace('../html/user-dashboard.html');
     alert(`
     Auto-Mart: -Alert-
