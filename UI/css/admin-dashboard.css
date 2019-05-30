@@ -1,0 +1,39 @@
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-areas:
+        "."
+        "all_unsold_cars"
+        "all_sold_cars"
+        "all_fraud_reports"
+        "."
+}
+
+.all-unsold-cars, .all-fraud-reports, .all-sold-cars{
+    background: white;
+}
+
+.all-unsold-cars{
+    grid-area: all_unsold_cars;
+}
+
+.all-sold-cars {
+    grid-area: all_sold_cars;
+
+}
+
+.all-fraud-reports{
+    grid-area: all_fraud_reports;
+}
+
+div.category-title a{
+    color: rgb(57, 184, 238);
+    text-decoration: underline;
+    font-size: large;
+}
+
+div.category-title a:hover {
+    background: #048EC9;
+    color: white;
+
+}
