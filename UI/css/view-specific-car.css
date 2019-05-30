@@ -62,7 +62,7 @@ table#update-album{
     display: none;
 }
 
-table#update-price {
+table#update-price, table#make-order {
     display: none;
 }
 table#update-price td{

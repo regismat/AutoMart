@@ -2,10 +2,13 @@ function displayAction(id){
     var item = document.querySelector(id);
     if( item.style.display=='none' ){
         item.style.display = 'block';
-        if (id == '#update-price') {
+        if (id == '#update-price' || id == '#make-order') {
             var price = document.querySelector('#price');
+            var quantity = document.querySelector('#quantity ')
             var inputed_price = document.querySelector('#inputed_price');
+            var inputed_quantity = document.querySelector('#inputed_quantity');
             inputed_price.value = price.innerHTML;
+            inputed_quantity.value = quantity.innerHTML;
         }
     }else{
         item.style.display = 'none';
@@ -18,6 +21,21 @@ function updatePrice() {
     price.innerHTML = inputed_price.value;
     hideAction('#update-price'); 
     alert('Successfully updated price');
+}
+
+function saveOrder() {
+    var price = document.querySelector('#price');
+    var quantity = document.querySelector('#quantity');
+    var inputed_price = document.querySelector('#inputed_price');
+    var inputed_quantity = document.querySelector('#inputed_quantity');
+    hideAction('#make-order');
+    location.replace('../html/user-dashboard.html');
+    alert(`
+    Auto-Mart: -Alert-
+    Order Successfully submitted.
+    You will soon receive the feedback from the seller.
+    `);
+    
 }
 
 function hideAction(id) {
