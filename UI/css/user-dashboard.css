@@ -46,7 +46,7 @@
 }
 .purchased-cars{
     grid-area: purchased_cars;
-    background: khaki;
+    background: white;
 }
 
 .purchase-orders{
