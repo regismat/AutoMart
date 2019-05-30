@@ -1,0 +1,34 @@
+.container {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5.5fr auto 4fr;
+    grid-gap: 0px;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer"
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    background: #D1D1D1;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0px auto 0px;
+    grid-gap: 10px;
+    grid-template-areas:
+        "."
+        "category"
+        "."
+}
+
+.category{
+    grid-area: category;
+    background: white;
+}
