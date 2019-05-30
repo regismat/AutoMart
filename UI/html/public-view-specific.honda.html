@@ -5,18 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link href="./../css/main.css" rel="stylesheet" type="text/css">
-    <link href="./../css/home.css" rel="stylesheet" type="text/css">
-    <link href="./../css/user-dashboard.css" rel="stylesheet" type="text/css">
-    <link href="./../css/public-view-all-unsold-cars.css" rel="stylesheet" type="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/add-car-advertisement.css">
+    <link rel="stylesheet" href="../css/view-specific-car.css">
+    <script type="text/javascript" src="../js/car-adv-actions.js"></script>
+    <script type="text/javascript" src="../js/image-preview.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AutoMart</title>
+    <title>Add Car</title>
 </head>
 
 <body>
     <div class="container">
         <div class="header">
-            <a href="#" class="logo">
+            <a href="./home.html" class="logo">
                 <img id="logo" src="../img/logo.svg" />
             </a>
             <div class="car-form">
@@ -29,8 +32,9 @@
                     <select id="car-type">
                         <option value="">All Types</option>
                         <option value="suv">SUV</option>
-                        <option value="van">Mini-Van</option>
+                        <option value="van">Van</option>
                         <option value="truck">Truck</option>
+                        <option value="bus">Bus</option>
                         <option value="mini-bus">Mini-Bus</option>
                         <option value="sedan">Sedan</option>
                     </select>
@@ -61,12 +65,12 @@
                     </select>
                 </form>
             </div>
-            <div class="search" onclick="search()">
-               <img class="resize" id="search" src="../img/search.ico" alt="">
+            <div class="search">
+                <img class="resize" id="search" src="../img/search.ico" alt="">
             </div>
             <div class="user-account">
                 <span class="greeting"><small>Hello, MyName</small></span>
-                <span class="my_automart"><a href="">My AutoMart</a></span>
+                <span class="my_automart"><a href="./user-dash-board.html">My AutoMart</a></span>
                 <span class="logout"><a href="../index.html">Logout</a></span>
             </div>
             <div class="menu">
@@ -79,58 +83,64 @@
         </div>
 
         <div class="content">
-            <div class="unsold-cars">
-                <div class="category-title">Unsold Cars (8)</div>
-                <div class="car-views">
-                    <div class="car-view">
-                        <span>
-                            <span class="car-view-title"><a href="./public-view-specific.mercedes.html">2013 MERCEDES-BENZ GL-CLASS: $37000</a></span>
-                            <img class="car-view-image" src="../img/car_images/suv/mercedes/main.jpg" alt="">
-                        </span>
-                    </div>
-                    <div class="car-view">
-                        <span>
-                            <span class="car-view-title"><a href="./public-view-specific.nissan.html">2006 NISSAN TEANA: $2000</a></span>
-                            <img class="car-view-image" src="../img/car_images/sedan/nissan/main.jpeg" alt="">
-                        </span>
-                    </div>
-                    <div class="car-view">
-                        <span>
-                            <span class="car-view-title"><a href="./public-view-specific.bmw.html">2005 BMW 3 SERIES: $2000</a></span>
-                            <img class="car-view-image" src="../img/car_images/sedan/bmw/main.jpeg" alt="">
-                        </span>
-                    </div>
-                    <div class="car-view">
-                        <span>
-                            <span class="car-view-title"><a href="./public-view-specific.ford.html">2002 FORD EXPLORER: $2000</a></span>
-                            <img class="car-view-image" src="../img/car_images/suv/ford/main.jpg" alt="">
-                        </span>
-                    </div>
-                    <div class="car-view">
-                        <span>
-                            <span class="car-view-title"><a href="./public-view-specific.vw.html">2007 VOLKSWAGEN PASSAT VARIANT: $1030</a></span>
-                            <img class="car-view-image" src="../img/car_images/sedan/vw/main.jpeg" alt="">
-                        </span>
-                    </div>
-                    <div class="car-view">
-                        <span>
-                            <span class="car-view-title"><a href="./public-view-specific.hiace.html">2009 TOYOTA HIACE VAN: $4732</a></span>
-                            <img class="car-view-image" src="../img/car_images/mini-bus/toyota/main.jpeg" alt="">
-                        </span>
-                    </div>
-                    <div class="car-view">
-                        <span>
-                            <span class="car-view-title"><a href="./public-view-specific.honda.html">2012 HONDA FIT: $4732</a></span>
-                            <img class="car-view-image" src="../img/car_images/van/honda/main.jpeg" alt="">
-                        </span>
-                    </div>
-                    <div class="car-view">
-                        <span>
-                            <span class="car-view-title"><a href="./public-view-specific.peugeot.html">PEUGEOT 308: $2500</a></span>
-                            <img class="car-view-image" src="../img/car_images/sedan/peugeot/main.jpeg" alt="">
-                        </span>
-                    </div>
-                </div>
+            <div class="thumbnails">
+                <span>
+                    <img id="main" onmouseover="imagePreview(this.src)" class="car-image"
+                        src="./../img/car_images/van/honda/main.jpeg" alt="">
+                </span>
+                <span>
+                    <img class="car-image" id="image2" onmouseover="imagePreview(this.src)" class="car-image"
+                        src="./../img/car_images/van/honda/2.jpeg" alt="">
+                </span>
+                <span>
+                    <img onmouseover="imagePreview(this.src)" id="image3" class="car-image"
+                        src="./../img/car_images/van/honda/3.jpeg" alt="">
+                </span>
+                <span>
+                    <img onmouseover="imagePreview(this.src)" id="image4" class="car-image"
+                        src="./../img/car_images/van/honda/4.jpeg" alt="">
+                </span>
+            </div>
+            <div class="main-image-preview">
+                <img id="preview" src="./../img/car_images/van/honda/main.jpeg" alt="Car's picture preview">
+            </div>
+            <div class="car-specs">
+                <span>2012 HONDA FIT: $4732</span>
+                <table>
+                    <tr>
+                        <td class="title">Description</td>
+                        <td class="detail">Well suited car for family and business moves</td>
+                    </tr>
+                    <tr>
+                        <td class="title">State</td>
+                        <td class="detail">New</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Location</td>
+                        <td class="detail">Lusaka/Zambia</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Fuel type</td>
+                        <td class="detail">Petrol</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Steering</td>
+                        <td class="detail">Left</td>
+                    </tr>
+                    <tr id="price-action">
+                        <td class="title">Price($)</td>
+                        <td id="price" class="price ">4732</td>
+                    </tr>
+                </table>
+                <span class="button" >Order now</span>
+                <span class="button" id="markavailability">Mark as fraud</span>
+                <table id="update-price">
+                    <tr>
+                        <td>New price($)</td>
+                        <td><input type="text" id='inputed_price'></td>
+                        <td><span onclick="updatePrice()" class="button">Update</span></td>
+                    </tr>
+                </table>
             </div>
         </div>
 
@@ -140,7 +150,7 @@
                 <a class="menu" href="">Used Cars</a>
                 <a class="menu" href="">New Cars</a>
                 <a class="menu" href="">Make your purchase order</a>
-                <a class="menu" href="">Post your car adverstisement</a>
+                <a class="menu" href="./add-car-advertisement.html">Post your car advertisement</a>
                 <a class="menu" href="">Help</a>
                 <a class="menu" href="">Contacts</a>
                 <a class="menu" href="">About AutoMart</a>
