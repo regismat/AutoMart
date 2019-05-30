@@ -24,6 +24,27 @@ function flagAsFraud() {
     location.replace('../html/public-view-all-unsold-cars.html');
 }
 
+function deleteAd() {
+    if(
+        confirm(`
+                Auto-Mart: -Alert-
+            You are about to delete this car advertisement record.
+            Do you really want to proceed?
+        `)
+        ) {
+            location.replace('../html/admin-dashboard.html');
+            alert(`
+    Auto-Mart: -Alert-
+    Successfully deleted car advertisement
+    `);
+    }else{
+        alert(`
+            Operation cancelled.
+        `);
+    }
+    
+}
+
 function updatePrice() {
     var price = document.querySelector('#price');
     var inputed_price = document.querySelector('#inputed_price');
