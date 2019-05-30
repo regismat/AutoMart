@@ -24,10 +24,6 @@ function updatePrice() {
 }
 
 function saveOrder() {
-    var price = document.querySelector('#price');
-    var quantity = document.querySelector('#quantity');
-    var inputed_price = document.querySelector('#inputed_price');
-    var inputed_quantity = document.querySelector('#inputed_quantity');
     hideAction('#make-order');
     location.replace('../html/user-dashboard.html');
     alert(`
@@ -35,7 +31,23 @@ function saveOrder() {
     Order Successfully submitted.
     You will soon receive the feedback from the seller.
     `);
-    
+}
+
+function updateOrder() {
+    var price = document.querySelector('#price');
+    var quantity = document.querySelector('#quantity');
+    var inputed_price = document.querySelector('#inputed_price');
+    var inputed_quantity = document.querySelector('#inputed_quantity');
+    price = inputed_price.value;
+    quantity = inputed_quantity.value;
+
+    //hideAction('#update-order');
+    location.replace('../html/user-dashboard.html');
+    alert(`
+    Auto-Mart: -Alert-
+    Order Successfully updated.
+    You will soon receive the feedback from the seller.
+    `);
 }
 
 function hideAction(id) {

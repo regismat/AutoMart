@@ -58,11 +58,8 @@ table{
 tr{
    border: 1px solid lightgray;
 }
-table#update-album{
-    display: none;
-}
 
-table#update-price, table#make-order {
+table#update-album, table#update-price, table#make-order, table#update-order {
     display: none;
 }
 table#update-price td{
