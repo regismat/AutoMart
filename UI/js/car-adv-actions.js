@@ -116,6 +116,33 @@ function search(){
   
 }
 
+function alertEmptyPriceRange(min, max){
+    if (min==undefined && max)
+    {
+        alert(`
+    Auto-Mart: -Alert : Empty Price Range - 
+    There 's currently no car available under $${max} of price.
+    Please visit other ranges or try later. 
+    `);
+    }else
+    if (min && max==undefined)
+    {
+        alert(`
+    Auto-Mart: -Alert : Empty Price Range - 
+    There's currently no car available above $${max} of price.
+    Please visit other ranges or try later. 
+    `);
+    }else
+    {
+        alert(`
+    Auto-Mart: -Alert : Empty Price Range - 
+    There's currently no car available in the range of $${min} to $${max} of price.
+    Please visit other ranges or try later. 
+    `);
+    }
+    
+}
+
 function addEvents(){
 
     

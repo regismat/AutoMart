@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link href="./UI/css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./js/car-adv-actions.js"></script>`
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AutoMart</title>
 </head>
@@ -68,8 +69,8 @@
             </div>
             <div class="menu">
                 <a class="menu" href="">Today's Deal</a>
-                <a class="menu" href="">Used Cars</a>
-                <a class="menu" href="">New Cars</a>
+                <a class="menu" href="./UI/html/public-view-used-unsold-cars-category-view.html">Used Cars</a>
+                <a class="menu" href="./UI/html/public-view-new-unsold-cars-category-view.html">New Cars</a>
                 <a class="menu" href="./UI/html/sign-in.html">Make your purchase order</a>
                 <a class="menu" href="./UI/html/sign-in.html">Post your car adverstisement</a>
             </div>
@@ -144,32 +145,32 @@
             <div class="car-by-price">
                 Shop Cars By Price
                 <div class="car-types">
-                    <span class="car-type">
-                        <a href="">Under $500</a>
+                    <span class="car-type" onclick="alertEmptyPriceRange(undefined, 500)">
+                        <a>Under $500</a>
+                    </span>
+                    <span class="car-type" onclick="alertEmptyPriceRange(500, 1000)">
+                        <a>$500 - $1000</a>
                     </span>
                     <span class="car-type">
-                        <a href="">$500 - $1000</a>
+                        <a href="./UI/html/public-view-all-unsold-cars-price-1000-1500.html">$1000 - $1500</a>
                     </span>
                     <span class="car-type">
-                        <a href="">$1000 - $1500</a>
+                        <a href="./UI/html/public-view-all-unsold-cars-price-1500-2500.html">$1500 - $2500</a>
                     </span>
                     <span class="car-type">
-                        <a href="">$1500 - $2000</a>
+                        <a href="./UI/html/public-view-all-unsold-cars-price-2500-3000.html">$2500 - $3000</a>
+                    </span>
+                    <span class="car-type" onclick="alertEmptyPriceRange(3000, 3500)">
+                        <a>$3000 - $3500 </a>
+                    </span>
+                    <span class="car-type" onclick="alertEmptyPriceRange(3500, 4000)">
+                        <a>$3500 - $4000</a>
                     </span>
                     <span class="car-type">
-                        <a href="">$2500 - $3000</a>
+                        <a href="./UI/html/public-view-all-unsold-cars-price-4000-4500.html">$4000 - $4500 </a>
                     </span>
                     <span class="car-type">
-                        <a href="">$3000 - $3500 </a>
-                    </span>
-                    <span class="car-type">
-                        <a href="">$3500 - $4000</a>
-                    </span>
-                    <span class="car-type">
-                        <a href="">$4000 - $4500 </a>
-                    </span>
-                    <span class="car-type">
-                        <a href="">Over $4500</a>
+                        <a href="./UI/html/public-view-all-unsold-cars-price-beyond-4500.html">Over $4500</a>
                     </span>
                 </div>
             </div>
@@ -178,8 +179,8 @@
         <div class="footer">
             <div class="footer-menu">
                 <a class="menu" href="">Today's Deal</a>
-                <a class="menu" href="">Used Cars</a>
-                <a class="menu" href="">New Cars</a>
+                <a class="menu" href="./UI/html/public-view-used-unsold-cars-category-view.html">Used Cars</a>
+                <a class="menu" href="./UI/html/public-view-new-unsold-cars-category-view.html">New Cars</a>
                 <a class="menu" href="./UI/html/sign-in.html">Make your purchase order</a>
                 <a class="menu" href="./UI/html/sign-in.html">Post your car adverstisement</a>
                 <a class="menu" href="">Help</a>
