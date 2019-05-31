@@ -1,0 +1,76 @@
+.container {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5.5fr auto 4fr;
+    grid-gap: 0px;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer"
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    background: #D1D1D1;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0px auto auto auto auto 0px;
+    grid-gap: 10px;
+    grid-template-areas:
+        "."
+        "unsold_cars"
+        "sold_cars"
+        "purchase_orders"
+        "purchased_cars"
+        "."
+}
+
+.unsold-cars{
+    grid-area: unsold_cars;
+    background: white;
+}
+
+.category-title{
+    font-size: larger;
+}
+
+.sold-cars{
+    grid-area: sold_cars;
+    background: white;
+}
+.purchased-cars{
+    grid-area: purchased_cars;
+    background: white;
+}
+
+.purchase-orders{
+    grid-area: purchase_orders;
+    background: white;
+}
+.car-views{
+    grid-area: car_views;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.car-view-image{
+    width: 95%;
+    height: 140px; 
+}
+
+.car-view-title a{
+    font-size: small;
+    color: rgb(57, 184, 238);
+}
+.car-view-title a:hover{
+    font-size: small;
+    color: #048EC9;
+    text-decoration: underline;
+}

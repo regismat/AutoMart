@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link href="./UI/css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./UI/js/car-adv-actions.js"></script>`
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AutoMart</title>
 </head>
@@ -68,10 +69,10 @@
             </div>
             <div class="menu">
                 <a class="menu" href="">Today's Deal</a>
-                <a class="menu" href="">Used Cars</a>
-                <a class="menu" href="">New Cars</a>
-                <a class="menu" href="">Make your purchase order</a>
-                <a class="menu" href="">Post your car adverstisement</a>
+                <a class="menu" href="./UI/html/public-view-used-unsold-cars-category-view.html">Used Cars</a>
+                <a class="menu" href="./UI/html/public-view-new-unsold-cars-category-view.html">New Cars</a>
+                <a class="menu" href="./UI/html/sign-in.html">Make your purchase order</a>
+                <a class="menu" href="./UI/html/sign-in.html">Post your car adverstisement</a>
             </div>
         </div>
 
@@ -84,27 +85,27 @@
                 <div class="car-type-main-title">Shop Cars By Types</div>
                 <div class="car-types">
                     <span class="car-type">
-                        <a href="">SUV</a>
+                        <a href="./UI/html/public-view-all-unsold-cars-type.suv.html">SUV</a>
                         <img class="car-image" src="./UI/img/car_images/suv/suv_icon.png" alt="">
                     </span>
                     <span class="car-type">
-                        <a href="">Van</a>
+                        <a href="./UI/html/public-view-all-unsold-cars-type.van.html">Van</a>
                         <img class="car-image" src="./UI/img/car_images/van/van_icon.png" alt="">
                     </span>
-                    <span class="car-type">
-                        <a href="">Truck</a>
+                    <span class="car-type" onclick="alertEmptyBodyType('Bus')">
+                        <a>Truck</a>
                         <img class="car-image" src="./UI/img/car_images/truck/truck_icon.png" alt="truck icon">
                     </span>
-                    <span class="car-type">
-                        <a href="">Bus</a>
+                    <span class="car-type" onclick="alertEmptyBodyType('Bus')">
+                        <a>Bus</a>
                         <img class="car-image" src="./UI/img/car_images/bus/bus_icon.png" alt="bus icon">
                     </span>
                     <span class="car-type">
-                        <a href="">Mini-Bus</a>
+                        <a href="./UI/html/public-view-all-unsold-cars-type.minibus.html">Mini-Bus</a>
                         <img class="car-image" src="./UI/img/car_images/mini-bus/mini-bus_icon.png" alt="mini-bus icon">
                     </span>
                     <span class="car-type">
-                        <a href="">Sedan</a>
+                        <a href="./UI/html/public-view-all-unsold-cars-type.sedan.html">Sedan</a>
                         <img class="car-image" src="./UI/img/car_images/sedan/sedan_icon.png" alt="sedan icon">
                     </span>
                 </div>
@@ -112,31 +113,32 @@
             <div class="available-makes">
                 <div>Shop Cars By Makes</div>
                 <div>
-                    <span class="make-logo">
+                    <span class="make-logo" onclick="redirectToMakePage('./UI/html/public-view-all-unsold-cars-make.mercedes.html')">
                         <img src="./UI/img/car_images/maker_logos/mercedes.png" alt="mercedes logo">
                     </span>
-                    <span class="make-logo">
+                    <span class="make-logo"
+                        onclick="redirectToMakePage('./UI/html/public-view-all-unsold-cars-make.toyota.html')">
                         <img src="./UI/img/car_images/maker_logos/toyota.png" alt="toyota logo">
                     </span>
-                    <span class="make-logo">
+                    <span class="make-logo" onclick="redirectToMakePage()">
                         <img src="./UI/img/car_images/maker_logos/hummer.png" alt="hummer logo">
                     </span>
-                    <span class="make-logo">
+                    <span class="make-logo" onclick="redirectToMakePage('./UI/html/public-view-all-unsold-cars-make.nissan.html')">
                         <img src="./UI/img/car_images/maker_logos/nisan.jpeg" alt="Nissan logo">
                     </span>
-                    <span class="make-logo">
+                    <span class="make-logo" onclick="redirectToMakePage('./UI/html/public-view-all-unsold-cars-make.honda.html')">
                         <img src="./UI/img/car_images/maker_logos/honda.png" alt="Honda logo">
                     </span>
-                    <span class="make-logo">
+                    <span class="make-logo" onclick="redirectToMakePage('./UI/htm/public-view-all-unsold-cars-make.ford')">
                         <img src="./UI/img/car_images/maker_logos/ford.jpeg" alt="Ford logo">
                     </span>
-                    <span class="make-logo">
+                    <span class="make-logo" onclick="redirectToMakePage('./UI/html/public-view-all-unsold-cars-make.bmw.html')">
                         <img src="./UI/img/car_images/maker_logos/bmw.jpeg" alt="BMW logo">
                     </span>
-                    <span class="make-logo">
+                    <span class="make-logo" onclick="redirectToMakePage('./UI/html/public-view-all-unsold-cars-make.peugeot.html')">
                         <img src="./UI/img/car_images/maker_logos/peugeot.png" alt="Peugeot logo">
                     </span>
-                    <span class="make-logo">
+                    <span class="make-logo" onclick="redirectToMakePage('./UI/html/public-view-all-unsold-cars-make.vw.html')">
                         <img src="./UI/img/car_images/maker_logos/vw.jpeg" alt="VW logo">
                     </span>
                 </div>
@@ -144,32 +146,32 @@
             <div class="car-by-price">
                 Shop Cars By Price
                 <div class="car-types">
-                    <span class="car-type">
-                        <a href="">Under $500</a>
+                    <span class="car-type" onclick="alertEmptyPriceRange(undefined, 500)">
+                        <a>Under $500</a>
+                    </span>
+                    <span class="car-type" onclick="alertEmptyPriceRange(500, 1000)">
+                        <a>$500 - $1000</a>
                     </span>
                     <span class="car-type">
-                        <a href="">$500 - $1000</a>
+                        <a href="./UI/html/public-view-all-unsold-cars-price-1000-1500.html">$1000 - $1500</a>
                     </span>
                     <span class="car-type">
-                        <a href="">$1000 - $1500</a>
+                        <a href="./UI/html/public-view-all-unsold-cars-price-1500-2500.html">$1500 - $2500</a>
                     </span>
                     <span class="car-type">
-                        <a href="">$1500 - $2000</a>
+                        <a href="./UI/html/public-view-all-unsold-cars-price-2500-3000.html">$2500 - $3000</a>
+                    </span>
+                    <span class="car-type" onclick="alertEmptyPriceRange(3000, 3500)">
+                        <a>$3000 - $3500 </a>
+                    </span>
+                    <span class="car-type" onclick="alertEmptyPriceRange(3500, 4000)">
+                        <a>$3500 - $4000</a>
                     </span>
                     <span class="car-type">
-                        <a href="">$2500 - $3000</a>
+                        <a href="./UI/html/public-view-all-unsold-cars-price-4000-4500.html">$4000 - $4500 </a>
                     </span>
                     <span class="car-type">
-                        <a href="">$3000 - $3500 </a>
-                    </span>
-                    <span class="car-type">
-                        <a href="">$3500 - $4000</a>
-                    </span>
-                    <span class="car-type">
-                        <a href="">$4000 - $4500 </a>
-                    </span>
-                    <span class="car-type">
-                        <a href="">Over $4500</a>
+                        <a href="./UI/html/public-view-all-unsold-cars-price-beyond-4500.html">Over $4500</a>
                     </span>
                 </div>
             </div>
@@ -178,10 +180,10 @@
         <div class="footer">
             <div class="footer-menu">
                 <a class="menu" href="">Today's Deal</a>
-                <a class="menu" href="">Used Cars</a>
-                <a class="menu" href="">New Cars</a>
-                <a class="menu" href="">Make your purchase order</a>
-                <a class="menu" href="">Post your car adverstisement</a>
+                <a class="menu" href="./UI/html/public-view-used-unsold-cars-category-view.html">Used Cars</a>
+                <a class="menu" href="./UI/html/public-view-new-unsold-cars-category-view.html">New Cars</a>
+                <a class="menu" href="./UI/html/sign-in.html">Make your purchase order</a>
+                <a class="menu" href="./UI/html/sign-in.html">Post your car adverstisement</a>
                 <a class="menu" href="">Help</a>
                 <a class="menu" href="">Contacts</a>
                 <a class="menu" href="">About AutoMart</a>
