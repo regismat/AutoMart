@@ -116,6 +116,14 @@ function search(){
   
 }
 
+function alertEmptyBodyType(name) {
+    alert(`
+    Auto-Mart: - Alert : Empty Category - 
+    There's currently no cars available under ${name} body type.
+    Please visit other types or try later. 
+    `);
+}
+
 function alertEmptyPriceRange(min, max){
     if (min==undefined && max)
     {
