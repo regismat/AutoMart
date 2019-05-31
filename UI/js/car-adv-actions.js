@@ -124,6 +124,21 @@ function alertEmptyBodyType(name) {
     `);
 }
 
+function redirectToMakePage(link) {
+    if (link)
+    {
+        location.replace(link);
+    }
+    else
+    {
+        alert(`
+    Auto-Mart: - Alert : Empty Category - 
+    There 's currently no ${name} cars available.
+    Please visit other types or try later. 
+    `);
+    }
+}
+
 function alertEmptyPriceRange(min, max){
     if (min==undefined && max)
     {
